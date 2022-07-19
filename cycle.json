@@ -1,29 +1,26 @@
 {
-    "version": "1.0",
-    "containers": {
-        "rabbitmq": { 
-            "name": "rabbitmq",
-            "image": { 
-                "name": "rabbitmq-plugin-enabled",
-                "origin": {
-                    "type": "docker-file",
-                    "details": {
-                        "url": "https://github.com/Tanayk7/rabbitmq.git",
-                        "context_dir": "/",
-                        "build_file": "/dockerfile"
-                    }
-                }
-            },
-            "config": {
-                "network": {
-                    "public": "enable",
-                    "hostname": "rmqhost",
-                    "ports": ["15672:15672", "5672:5672"]
-                },
-                "deploy": {
-                    "instances": 1    
-                }
-            }
-        }
-    }
+	"version": "1.0",
+	"containers": {
+		"rabbitmq": {
+			"name": "rabbitmq",
+			"image": {
+				"name": "rabbitmq-plugin-enabled",
+				"origin": {
+					"type": "docker-file",
+					"context_dir": "/",
+					"build_file": "/Dockerfile"
+				}
+			},
+			"config": {
+				"network": {
+					"public": "enable",
+					"hostname": "rmqhost",
+					"ports": ["15672:15672", "5672:5672"]
+				},
+				"deploy": {
+					"instances": 1
+				}
+			}
+		}
+	}
 }
