@@ -7,21 +7,18 @@
                 "name": "rabbitmq-plugin-enabled",
                 "origin": {
                     "type": "docker-file",
-                    "details": {
-                        "url": "https://github.com/Tanayk7/rabbitmq.git"
-                    },
                     "context_dir": "/",
-                    "build_file": "/Dockerfile"
+                    "build_file": "/dockerfile"
+                }
+            },
+            "config": {
+                "network": {
+                    "public": "enable",
+                    "hostname": "rmqhost",
+                    "ports": ["15672:15672", "5672:5672"]
                 },
-                "config": {
-                    "network": {
-                        "public": "enable",
-                        "hostname": "rmqhost",
-                        "ports": ["15672:15672", "5672:5672"]
-                    },
-                    "deploy": {
-                        "instances": 1    
-                    }
+                "deploy": {
+                    "instances": 1    
                 }
             }
         }
