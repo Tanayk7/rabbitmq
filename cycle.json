@@ -3,6 +3,7 @@
   "containers": {
     "rabbitmq": {
       "name": "rabbitmq",
+      "stateful": true,
       "image": {
         "name": "rabbitmq-plugin-enabled",
         "origin": {

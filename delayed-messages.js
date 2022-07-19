@@ -3,7 +3,7 @@ var amqp = require('amqplib/callback_api');
 var amqpConn = null;
 
 function start() {
-  amqp.connect("amqp://guest:guest@localhost:5000?heartbeat=60", function(err, conn) {
+  amqp.connect("amqp://username:password@45.77.190.162:5672?heartbeat=60", function(err, conn) {
     if (err) {
       console.error("[AMQP]", err.message);
       return setTimeout(start, 1000);
