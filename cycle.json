@@ -7,8 +7,11 @@
                 "name": "rabbitmq-plugin-enabled",
                 "origin": {
                     "type": "docker-file",
-                    "context_dir": "/",
-                    "build_file": "/dockerfile"
+                    "details": {
+                        "url": "https://github.com/Tanayk7/rabbitmq.git",
+                        "context_dir": "/",
+                        "build_file": "/dockerfile"
+                    }
                 }
             },
             "config": {
