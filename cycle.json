@@ -26,7 +26,8 @@
         "runtime": {
           "environment_vars": {
             "RABBITMQ_DEFAULT_PASS": "password",
-            "RABBITMQ_DEFAULT_USER": "username"
+            "RABBITMQ_DEFAULT_USER": "username",
+            "RABBITMQ_NODENAME": "rabbit@rmqhost"
           }
         }
       }

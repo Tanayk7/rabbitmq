@@ -13,6 +13,10 @@ services:
     networks:
       - rabbitmq_go_net
   
+volumes:
+  myapp: 
+    external: true
+    
 networks: 
   rabbitmq_go_net: 
     driver: bridge
